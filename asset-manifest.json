@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/concepts-card-generator/static/css/main.5f361e03.chunk.css",
+    "main.js": "/concepts-card-generator/static/js/main.3aaadf59.chunk.js",
+    "main.js.map": "/concepts-card-generator/static/js/main.3aaadf59.chunk.js.map",
+    "runtime-main.js": "/concepts-card-generator/static/js/runtime-main.e9cbc325.js",
+    "runtime-main.js.map": "/concepts-card-generator/static/js/runtime-main.e9cbc325.js.map",
+    "static/js/2.598ac80d.chunk.js": "/concepts-card-generator/static/js/2.598ac80d.chunk.js",
+    "static/js/2.598ac80d.chunk.js.map": "/concepts-card-generator/static/js/2.598ac80d.chunk.js.map",
+    "index.html": "/concepts-card-generator/index.html",
+    "precache-manifest.9fa0c998511b9ebcc462cc0f19ee1a41.js": "/concepts-card-generator/precache-manifest.9fa0c998511b9ebcc462cc0f19ee1a41.js",
+    "service-worker.js": "/concepts-card-generator/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/concepts-card-generator/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.598ac80d.chunk.js.LICENSE.txt": "/concepts-card-generator/static/js/2.598ac80d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/concepts-card-generator/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e9cbc325.js",
+    "static/js/2.598ac80d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.3aaadf59.chunk.js"
+  ]
+}
