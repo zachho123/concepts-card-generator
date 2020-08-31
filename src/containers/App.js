@@ -1,74 +1,54 @@
 import React from 'react';
 import { fabric } from 'fabric';
+// import cardImg from '../assets/img/my-blank-card.png';
+import blankCardsImg from '../assets/img/my-blank-cards.png';
 
 // Assets
-import logo from '../assets/img/logo.svg';
 import '../styles/App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       numCards: 68
     };
+
+    this.handleDownload = this.handleDownload.bind(this);
   }
 
   componentDidMount() {
-    let canvas = new fabric.StaticCanvas(
+    let canvas = new fabric.Canvas(
       document.getElementById('canvas'),
-      {
-        width: 500,
-        height: 700,
-        backgroundColor: '#FFFAF0'
-      }
+      { width: 5000, height: 4900 }
     );
 
-    let cardBorder = new fabric.Rect({
-      left: 10,
-      top: 10,
-      width: 480,
-      height: 680,
-      fill: '#FFFAF0',
-      stroke: 'blue',
-      strokeWidth: 1
-    });
-
-    let easyBorder = new fabric.Rect({
-      left: 20,
-      top: 20,
-      width: 440,
-      height: 200,
-      fill: '#FFFAF0',
-      stroke: 'green',
-      strokeWidth: 2
-    });
-
-    let medBorder = new fabric.Rect({
-      left: 20,
-      top: 230,
-      width: 440,
-      height: 200,
-      fill: '#FFFAF0',
-      stroke: 'blue',
-      strokeWidth: 2
-    });
-
-    let hardBorder = new fabric.Rect({
-      left: 20,
-      top: 440,
-      width: 440,
-      height: 200,
-      fill: '#FFFAF0',
-      stroke: 'red',
-      strokeWidth: 2
-    });
+    let cardElement = document.getElementById('blankCard');
+    let cardInstance = new fabric.Image(cardElement);
     
-    canvas.add(cardBorder, easyBorder, medBorder, hardBorder);
+    setTimeout(() => {
+      canvas.add(cardInstance)},
+      1000);
+  }
+
+  handleDownload(e) {
+    const canvas = document.getElementById('canvas');
+    const target = e.target;
+    target.href = canvas.toDataURL({
+      format: 'png',
+      // format: 'hpg',
+      // quality: 0.8
+    });
+    target.download = 'canvas.png';
   }
 
   render() {
     return (
-      <canvas id="canvas" className="card-canvas"></canvas>
+      <>
+        <canvas id="canvas"></canvas>
+        <img src={blankCardsImg} id="blankCard" alt="card" hidden />
+        <a id="download" href="#" onClick={this.handleDownload}>Download</a>
+      </>
     );
   }
 }
